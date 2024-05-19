@@ -16,10 +16,16 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Expanded(
-                child: DescriptiveButton(),
+                child: DescriptiveButton(
+                  heading: "Quick Match",
+                  description: "Just the bare minimum to get you started",
+                ),
               ),
               Expanded(
-                child: DescriptiveButton(),
+                child: DescriptiveButton(
+                  heading: "Standard Match",
+                  description: "Fully featured scoreboard for professinal matches",
+                ),
               ),
             ],
           ),
@@ -27,10 +33,16 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Expanded(
-                child: DescriptiveButton(),
+                child: DescriptiveButton(
+                  heading: "Manage Players",
+                  description: "Add, edit, or archive players",
+                ),
               ),
               Expanded(
-                child: DescriptiveButton(),
+                child: DescriptiveButton(
+                  heading: "Manage Teams",
+                  description: "Create, edit, or delete teams",
+                ),
               ),
             ],
           ),

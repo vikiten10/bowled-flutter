@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class DescriptiveButton extends StatelessWidget {
-  const DescriptiveButton({super.key});
+  final String heading;
+  final String description;
+
+  const DescriptiveButton(
+      {super.key, required this.heading, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -16,24 +20,24 @@ class DescriptiveButton extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
         ),
         onPressed: () {},
-        child: const Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Quick Match",
+              heading,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Text(
-              "Start quickly without the need to add players, teams, etc",
+              description,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 12,
               ),
             ),
